@@ -38,6 +38,7 @@ const packages = {
 }
 
 function update(name) {
+  const output = path.resolve(__dirname, '../packages')
   const file = files[name]
   const json = packages[name]
   if (json.dependencies) {
@@ -45,7 +46,7 @@ function update(name) {
     for (let i = 0; i < keys.length; i++) {
       if (/^@ikigai-sigma-l\/.*/.test(keys[i])) {
         const dependency = keys[i].replace('@ikigai-sigma-l/', '')
-        json.dependencies[keys[i]] = "workspace:*"
+        json.dependencies[keys[i]] = "file:" + output + "/ikigai-sigma-l-" + dependency + "-" + packages[dependency].version + ".tgz"
       }
     }
   }

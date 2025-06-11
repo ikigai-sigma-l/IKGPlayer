@@ -202,12 +202,9 @@ function packageMapTransformer() {
 }
 
 function getVersion() {
-  try {
-    return execSync('git describe --tags').toString().trim();
-  }
-  catch (error) {
-    return 'n0.0.1';
-  }
+  const cheap = path.resolve(__dirname, '../src/cheap/package.json')
+  const json = JSON.parse(fs.readFileSync(cheap, 'utf8'))
+  return json.version
 }
 
 function compile(fileNames, options, writeCallback, cjs = false, defined = {}) {
@@ -517,9 +514,6 @@ function buildPackage(packageName, taskLevel = 1, fileNamesFilter) {
   const cjsReg = new RegExp(`dist\/cjs\/${packageName}\/?`)
 
   printTaskLog(taskLevel, packageName, 'START', `starting built ${packageName} esm package`);
-
-  const files = parsedCommandLine.options
-  printTaskLog(taskLevel, packageName, 'FILE', JSON.stringify(files))
 
   compile(fileNamesFilter ? parsedCommandLine.fileNames.filter(fileNamesFilter) : parsedCommandLine.fileNames, parsedCommandLine.options, (fileName, data) => {
     let dir = path.dirname(fileName);
@@ -916,9 +910,6 @@ function buildAll() {
     stdio: 'inherit'
   })
   spawnSync('node', [`${path.resolve(__dirname, '../')}/scripts/build-package.js`, '--package=avtranscoder'], {
-    stdio: 'inherit'
-  })
-  spawnSync('node', [`${path.resolve(__dirname, '../')}/scripts/build-package.js`, '--package=avplayer_ui'], {
     stdio: 'inherit'
   })
 }

@@ -217,7 +217,7 @@ function compile(fileNames, options, writeCallback, cjs = false, defined = {}) {
       packageMapTransformer(),
       transformer.before(program, {
         tmpPath: path.join(__dirname, '../dist'),
-        cheapPacketName: '@libmedia/cheap',
+        cheapPacketName: '@ikigai-sigma-l/cheap',
         defined: Object.assign({
           ENV_NODE: cjs,
           ENV_WEBPACK: false,
@@ -517,6 +517,9 @@ function buildPackage(packageName, taskLevel = 1, fileNamesFilter) {
   const cjsReg = new RegExp(`dist\/cjs\/${packageName}\/?`)
 
   printTaskLog(taskLevel, packageName, 'START', `starting built ${packageName} esm package`);
+
+  const files = parsedCommandLine.options
+  printTaskLog(taskLevel, packageName, 'FILE', JSON.stringify(files))
 
   compile(fileNamesFilter ? parsedCommandLine.fileNames.filter(fileNamesFilter) : parsedCommandLine.fileNames, parsedCommandLine.options, (fileName, data) => {
     let dir = path.dirname(fileName);

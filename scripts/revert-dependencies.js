@@ -45,8 +45,8 @@ function update(name) {
     const keys = Object.keys(json.dependencies)
     for (let i = 0; i < keys.length; i++) {
       if (/^@ikigai-sigma-l\/.*/.test(keys[i])) {
-        const dependency = keys[i].replace('@ikigai-sigma-l/', '')
-        json.dependencies[keys[i]] = "file:" + output + "/ikigai-sigma-l-" + dependency + "-" + packages[dependency].version + ".tgz"
+        const dependency = keys[i].replace('@ikigai-sigma-l/ikgplayer-', '')
+        json.dependencies[keys[i]] = "file:" + output + "/ikigai-sigma-l-ikgplayer-" +  dependency + "-" + packages[dependency].version + ".tgz"
       }
     }
   }

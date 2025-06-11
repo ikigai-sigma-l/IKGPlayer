@@ -1,6 +1,6 @@
 {
-  "name": "@ikigai-sigma-l/cheap",
-  "version": "1.5.0",
+  "name": "@ikigai-sigma-l/ikgplayer-cheap",
+  "version": "0.0.1",
   "description": "一个多线程和高性能 wasm 开发库",
   "sideEffects": [
     "./heap.ts",
@@ -35,7 +35,7 @@
     "yargs": "^13.3.0"
   },
   "dependencies": {
-    "@ikigai-sigma-l/common": "2.4.1"
+    "@ikigai-sigma-l/ikgplayer-common": "0.0.1"
   },
   "exports": {
     "./cheapdef": {

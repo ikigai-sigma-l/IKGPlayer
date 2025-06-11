@@ -1,6 +1,6 @@
 {
-  "name": "@ikigai-sigma-l/audiostretchpitch",
-  "version": "1.5.0",
+  "name": "@ikigai-sigma-l/ikgplayer-audiostretchpitch",
+  "version": "0.0.1",
   "description": "libmedia 音频变调变速",
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
   "author": "",
   "license": "LGPL-3.0-or-later",
   "dependencies": {
-    "@ikigai-sigma-l/cheap": "1.8.1"
+    "@ikigai-sigma-l/ikgplayer-cheap": "0.0.1"
   },
   "exports": {
     "./StretchPitcher": {

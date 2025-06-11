@@ -1,6 +1,6 @@
 {
-  "name": "@ikigai-sigma-l/avtranscoder",
-  "version": "1.5.0",
+  "name": "@ikigai-sigma-l/ikgplayer-avtranscoder",
+  "version": "0.0.1",
   "description": "libmedia avtranscoder",
   "repository": {
     "type": "git",
@@ -28,18 +28,18 @@
   "author": "",
   "license": "LGPL-3.0-or-later",
   "dependencies": {
-    "@ikigai-sigma-l/common": "2.4.1",
-    "@ikigai-sigma-l/cheap": "1.8.1",
-    "@ikigai-sigma-l/avutil": "1.8.4",
-    "@ikigai-sigma-l/avprotocol": "1.8.4",
-    "@ikigai-sigma-l/avcodec": "1.8.4",
-    "@ikigai-sigma-l/avformat": "1.8.4",
-    "@ikigai-sigma-l/avfilter": "1.8.4",
-    "@ikigai-sigma-l/avpipeline": "1.8.4",
-    "@ikigai-sigma-l/avnetwork": "1.8.4",
-    "@ikigai-sigma-l/audioresample": "1.8.4",
-    "@ikigai-sigma-l/audiostretchpitch": "1.8.4",
-    "@ikigai-sigma-l/videoscale": "1.8.4"
+    "@ikigai-sigma-l/ikgplayer-common": "0.0.1",
+    "@ikigai-sigma-l/ikgplayer-cheap": "0.0.1",
+    "@ikigai-sigma-l/ikgplayer-avutil": "0.0.1",
+    "@ikigai-sigma-l/ikgplayer-avprotocol": "0.0.1",
+    "@ikigai-sigma-l/ikgplayer-avcodec": "0.0.1",
+    "@ikigai-sigma-l/ikgplayer-avformat": "0.0.1",
+    "@ikigai-sigma-l/ikgplayer-avfilter": "0.0.1",
+    "@ikigai-sigma-l/ikgplayer-avpipeline": "0.0.1",
+    "@ikigai-sigma-l/ikgplayer-avnetwork": "0.0.1",
+    "@ikigai-sigma-l/ikgplayer-audioresample": "0.0.1",
+    "@ikigai-sigma-l/ikgplayer-audiostretchpitch": "0.0.1",
+    "@ikigai-sigma-l/ikgplayer-videoscale": "0.0.1"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

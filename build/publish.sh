@@ -4,6 +4,7 @@ NOW_PATH=$(cd $(dirname $0); pwd)
 
 PROJECT_ROOT_PATH=$(cd $NOW_PATH/../; pwd)
 
+node $PROJECT_ROOT_PATH/scripts/build-package.js --package=all
 node $PROJECT_ROOT_PATH/scripts/update-dependencies.js
 
 cd $PROJECT_ROOT_PATH/src/common

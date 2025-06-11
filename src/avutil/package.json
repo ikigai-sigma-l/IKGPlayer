@@ -1,6 +1,6 @@
 {
-  "name": "@ikigai-sigma-l/avutil",
-  "version": "1.5.0",
+  "name": "@ikigai-sigma-l/ikgplayer-avutil",
+  "version": "0.0.1",
   "description": "libmedia 工具模块",
   "repository": {
     "type": "git",
@@ -16,8 +16,8 @@
   "author": "",
   "license": "LGPL-3.0-or-later",
   "dependencies": {
-    "@ikigai-sigma-l/common": "2.4.1",
-    "@ikigai-sigma-l/cheap": "1.8.1"
+    "@ikigai-sigma-l/ikgplayer-common": "0.0.1",
+    "@ikigai-sigma-l/ikgplayer-cheap": "0.0.1"
   },
   "exports": {
     "./AVStream": {

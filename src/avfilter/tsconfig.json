@@ -1,0 +1,28 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "sourceMap": true,
+    "declarationMap": false,
+    "strict": true,
+    "baseUrl": "./",
+    "paths": {
+      "avutil/*": ["../avutil/*"],
+      "audioresample/*": ["../audioresample/*"],
+      "videoscale/*": ["../videoscale/*"],
+
+      "cheap/*": ["../cheap/*"],
+      "common/*": ["../common/*"]
+    },
+    "allowJs": false
+  },
+  "include": [
+    "./**/*.ts",
+    "../cheap/**/*.ts",
+    "../common/types/*.ts",
+    "../../@types/index.d.ts",
+    "../avutil/**/*.ts",
+    "../audioresample/**/*.ts",
+    "../videoscale/**/*.ts",
+  ]
+}

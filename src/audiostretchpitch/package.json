@@ -1,0 +1,30 @@
+{
+  "name": "@ikigai-sigma-l/audiostretchpitch",
+  "version": "1.5.0",
+  "description": "libmedia 音频变调变速",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaohappy/libmedia.git"
+  },
+  "scripts": {
+    "prepublishOnly": "node ../../scripts/check-publish-status.js --package=audiostretchpitch"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "",
+  "license": "LGPL-3.0-or-later",
+  "dependencies": {
+    "@ikigai-sigma-l/cheap": "1.8.1"
+  },
+  "exports": {
+    "./StretchPitcher": {
+      "import": "./dist/esm/StretchPitcher.js",
+      "require": "./dist/cjs/StretchPitcher.js",
+      "types": "./dist/esm/StretchPitcher.d.ts"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

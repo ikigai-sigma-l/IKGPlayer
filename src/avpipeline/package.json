@@ -1,0 +1,89 @@
+{
+  "name": "@ikigai-sigma-l/avpipeline",
+  "version": "1.5.0",
+  "description": "libmedia 处理管线模块",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikigai-sigma-l/IKGPlayer.git"
+  },
+  "scripts": {
+    "prepublishOnly": "node ../../scripts/check-publish-status.js --package=avpipeline"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "",
+  "license": "LGPL-3.0-or-later",
+  "dependencies": {
+    "@ikigai-sigma-l/common": "2.4.1",
+    "@ikigai-sigma-l/cheap": "1.8.1",
+    "@ikigai-sigma-l/avutil": "1.8.4",
+    "@ikigai-sigma-l/avprotocol": "1.8.4",
+    "@ikigai-sigma-l/avformat": "1.8.4",
+    "@ikigai-sigma-l/avrender": "1.8.4",
+    "@ikigai-sigma-l/audioresample": "1.8.4",
+    "@ikigai-sigma-l/audiostretchpitch": "1.8.4",
+    "@ikigai-sigma-l/avnetwork": "1.8.4",
+    "@ikigai-sigma-l/avcodec": "1.8.4"
+  },
+  "exports": {
+    "./AudioDecodePipeline": {
+      "import": "./dist/esm/AudioDecodePipeline.js",
+      "require": "./dist/cjs/AudioDecodePipeline.js",
+      "types": "./dist/esm/AudioDecodePipeline.d.ts"
+    },
+    "./AudioEncodePipeline": {
+      "import": "./dist/esm/AudioEncodePipeline.js",
+      "require": "./dist/cjs/AudioEncodePipeline.js",
+      "types": "./dist/esm/AudioEncodePipeline.d.ts"
+    },
+    "./AudioRenderPipeline": {
+      "import": "./dist/esm/AudioRenderPipeline.js",
+      "require": "./dist/cjs/AudioRenderPipeline.js",
+      "types": "./dist/esm/AudioRenderPipeline.d.ts"
+    },
+    "./DemuxPipeline": {
+      "import": "./dist/esm/DemuxPipeline.js",
+      "require": "./dist/cjs/DemuxPipeline.js",
+      "types": "./dist/esm/DemuxPipeline.d.ts"
+    },
+    "./IOPipeline": {
+      "import": "./dist/esm/IOPipeline.js",
+      "require": "./dist/cjs/IOPipeline.js",
+      "types": "./dist/esm/IOPipeline.d.ts"
+    },
+    "./MuxPipeline": {
+      "import": "./dist/esm/MuxPipeline.js",
+      "require": "./dist/cjs/MuxPipeline.js",
+      "types": "./dist/esm/MuxPipeline.d.ts"
+    },
+    "./Pipeline": {
+      "import": "./dist/esm/Pipeline.js",
+      "require": "./dist/cjs/Pipeline.js",
+      "types": "./dist/esm/Pipeline.d.ts"
+    },
+    "./VideoDecodePipeline": {
+      "import": "./dist/esm/VideoDecodePipeline.js",
+      "require": "./dist/cjs/VideoDecodePipeline.js",
+      "types": "./dist/esm/VideoDecodePipeline.d.ts"
+    },
+    "./VideoEncodePipeline": {
+      "import": "./dist/esm/VideoEncodePipeline.js",
+      "require": "./dist/cjs/VideoEncodePipeline.js",
+      "types": "./dist/esm/VideoEncodePipeline.d.ts"
+    },
+    "./VideoRenderPipeline": {
+      "import": "./dist/esm/VideoRenderPipeline.js",
+      "require": "./dist/cjs/VideoRenderPipeline.js",
+      "types": "./dist/esm/VideoRenderPipeline.d.ts"
+    },
+    "./struct/stats": {
+      "import": "./dist/esm/struct/stats.js",
+      "require": "./dist/cjs/struct/stats.js",
+      "types": "./dist/esm/struct/stats.d.ts"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

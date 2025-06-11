@@ -1,0 +1,32 @@
+{
+  "name": "@ikigai-sigma-l/audioresample",
+  "version": "1.5.0",
+  "description": "libmedia 音频重采样模块",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikigai-sigma-l/IKGPlayer.git"
+  },
+  "scripts": {
+    "prepublishOnly": "node ../../scripts/check-publish-status.js --package=audioresample"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "",
+  "license": "LGPL-3.0-or-later",
+  "dependencies": {
+    "@ikigai-sigma-l/common": "2.4.1",
+    "@ikigai-sigma-l/cheap": "1.8.1",
+    "@ikigai-sigma-l/avutil": "1.8.4"
+  },
+  "exports": {
+    "./Resampler": {
+      "import": "./dist/esm/Resampler.js",
+      "require": "./dist/cjs/Resampler.js",
+      "types": "./dist/esm/Resampler.d.ts"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

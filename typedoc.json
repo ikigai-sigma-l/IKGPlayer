@@ -1,0 +1,31 @@
+{
+  "name": "libmedia",
+  "entryPoints": [
+    "src/avplayer/AVPlayer.ts",
+    "src/ui/avplayer/AVPlayer.ts",
+    "src/avtranscoder/AVTranscoder.ts",
+
+    "src/avformat/AVFormatContext.ts",
+    "src/avformat/demux.ts",
+    "src/avformat/mux.ts",
+
+    "src/avfilter/**/*.ts",
+    "src/avcodec/**/*.ts",
+    "src/avnetwork/**/*.ts",
+    "src/avpipeline/**/*.ts",
+    "src/avutil/**/*.ts",
+    "src/avrender/**/*.ts",
+    "src/common/**/*.ts",
+    "src/cheap/**/*.ts",
+    "src/videoscale/**/*.ts",
+    "src/audioresample/**/*.ts",
+    "src/audiostretchpitch/**/*.ts",
+  ],
+  "plugin": ["typedoc-plugin-rename-defaults"],
+  "readme": "none",
+  "out": "./docs/libmedia_api",
+  "excludeInternal": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "exclude": []
+}

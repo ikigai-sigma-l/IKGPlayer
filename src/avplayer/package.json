@@ -1,0 +1,48 @@
+{
+  "name": "@ikigai-sigma-l/avplayer",
+  "version": "1.5.0",
+  "description": "libmedia avplayer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikigai-sigma-l/IKGPlayer.git"
+  },
+  "scripts": {
+    "prepublishOnly": "node ../../scripts/check-publish-status.js --package=avplayer"
+  },
+  "types": "./dist/types/AVPlayer.d.ts",
+  "module": "./dist/esm/avplayer.js",
+  "main": "./dist/umd/avplayer.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/avplayer.js",
+      "require": "./dist/umd/avplayer.js",
+      "types": "./dist/types/AVPlayer.d.ts"
+    },
+    "./AVPlayer": {
+      "types": "./dist/types/AVPlayer.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "",
+  "license": "LGPL-3.0-or-later",
+  "dependencies": {
+    "@ikigai-sigma-l/common": "2.4.1",
+    "@ikigai-sigma-l/cheap": "1.8.1",
+    "@ikigai-sigma-l/avutil": "1.8.4",
+    "@ikigai-sigma-l/avprotocol": "1.8.4",
+    "@ikigai-sigma-l/avcodec": "1.8.4",
+    "@ikigai-sigma-l/avformat": "1.8.4",
+    "@ikigai-sigma-l/avpipeline": "1.8.4",
+    "@ikigai-sigma-l/avnetwork": "1.8.4",
+    "@ikigai-sigma-l/avrender": "1.8.4",
+    "@ikigai-sigma-l/audioresample": "1.8.4",
+    "@ikigai-sigma-l/audiostretchpitch": "1.8.4",
+    "ass-compiler": "^0.1.13",
+    "assjs": "^0.1.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@ikigai-sigma-l/videoscale",
+  "version": "1.5.0",
+  "description": "libmedia 图像格式处理",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikigai-sigma-l/IKGPlayer.git"
+  },
+  "scripts": {
+    "prepublishOnly": "node ../../scripts/check-publish-status.js --package=videoscale"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "",
+  "license": "LGPL-3.0-or-later",
+  "dependencies": {
+    "@ikigai-sigma-l/common": "2.4.1",
+    "@ikigai-sigma-l/cheap": "1.8.1",
+    "@ikigai-sigma-l/avutil": "1.8.4"
+  },
+  "exports": {
+    "./VideoScaler": {
+      "import": "./dist/esm/VideoScaler.js",
+      "require": "./dist/cjs/VideoScaler.js",
+      "types": "./dist/esm/VideoScaler.d.ts"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

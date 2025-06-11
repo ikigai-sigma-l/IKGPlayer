@@ -1,0 +1,47 @@
+{
+  "name": "@ikigai-sigma-l/avtranscoder",
+  "version": "1.5.0",
+  "description": "libmedia avtranscoder",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikigai-sigma-l/IKGPlayer.git"
+  },
+  "scripts": {
+    "prepublishOnly": "node ../../scripts/check-publish-status.js --package=avtranscoder"
+  },
+  "types": "./dist/types/AVTranscoder.d.ts",
+  "module": "./dist/esm/avtranscoder.js",
+  "main": "./dist/umd/avtranscoder.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/avtranscoder.js",
+      "require": "./dist/umd/avtranscoder.js",
+      "types": "./dist/types/AVTranscoder.d.ts"
+    },
+    "./AVTranscoder": {
+      "types": "./dist/types/AVTranscoder.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "",
+  "license": "LGPL-3.0-or-later",
+  "dependencies": {
+    "@ikigai-sigma-l/common": "2.4.1",
+    "@ikigai-sigma-l/cheap": "1.8.1",
+    "@ikigai-sigma-l/avutil": "1.8.4",
+    "@ikigai-sigma-l/avprotocol": "1.8.4",
+    "@ikigai-sigma-l/avcodec": "1.8.4",
+    "@ikigai-sigma-l/avformat": "1.8.4",
+    "@ikigai-sigma-l/avfilter": "1.8.4",
+    "@ikigai-sigma-l/avpipeline": "1.8.4",
+    "@ikigai-sigma-l/avnetwork": "1.8.4",
+    "@ikigai-sigma-l/audioresample": "1.8.4",
+    "@ikigai-sigma-l/audiostretchpitch": "1.8.4",
+    "@ikigai-sigma-l/videoscale": "1.8.4"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
